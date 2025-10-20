@@ -79,7 +79,7 @@ git clone https://github.com/<your-username>/ziweidoushu.git
 cd ziweidoushu
 
 # 2) Sync deps into a local .venv from uv.lock
-uv sync --dev --frozen
+uv sync
 
 # 3) Start Qdrant in another terminal (see below)
 # 4) (Optional) Start Phoenix (see below)
@@ -95,9 +95,7 @@ Notes:
 ### Start Qdrant (recommended via Docker)
 
 ```bash
-docker run --name qdrant -p 6333:6333 \
-  -v "$(pwd)/qdrant_storage:/qdrant/storage" \
-  qdrant/qdrant:latest
+docker run -p 6333:6333 -p 6334:6334    -v "$(pwd)/qdrant_storage:/qdrant/storage:z"    qdrant/qdrant
 ```
 
 This persists data under `./qdrant_storage`.
