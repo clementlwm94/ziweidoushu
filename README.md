@@ -48,10 +48,14 @@ A QA dataset was generated and an LLM judge scored responses for “relevance”
 - Details: see `generate grond-truth-data.ipynb`.
 
 ## Monitoring & Feedback
+<img width="1301" height="926" alt="image" src="https://github.com/user-attachments/assets/c2ec3703-d061-4cc7-bf4f-79fad7588c07" />
+
 - Phoenix tracing is enabled via `phoenix.otel.register` in `qdrant_workflow.py`. Start Phoenix to view traces of retrieval and LLM calls.
 - You can extend the HTML form to collect thumbs‑up/down or free‑text feedback and persist it alongside questions and answers for later analysis.
 
 ## Interface
+<img width="934" height="929" alt="image" src="https://github.com/user-attachments/assets/e9037f51-b05c-4e4c-ae47-bbbcf2a8d802" />
+
 We use FastAPI for the application interface (served by `rag_api.py`).
 
 
