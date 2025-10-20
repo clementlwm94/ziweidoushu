@@ -105,8 +105,7 @@ This persists data under `./qdrant_storage`.
 ### Start Phoenix (optional)
 
 ```bash
-pip install arize-phoenix
-phoenix serve --host 0.0.0.0 --port 6006
+docker run -p 6006:6006 -p 4317:4317 arizephoenix/phoenix:latest
 ```
 
 The workflow is instrumented to emit traces to `PHOENIX_COLLECTOR_ENDPOINT` (`http://localhost:6006` by default).
