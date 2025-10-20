@@ -1,6 +1,7 @@
 # zhiweidoushu
 
 Retrieval‑augmented Zi Wei Dou Shu (紫微斗数) assistant built with FastAPI, LangChain, Qdrant (hybrid sparse+dense), and Arize Phoenix tracing/monitoring.
+<img width="1060" height="753" alt="image" src="https://github.com/user-attachments/assets/06a70640-dabe-4a04-aba5-e40c49772234" />
 
 This repository contains:
 - A FastAPI UI (`rag_api.py`) to collect birth info + question and return a generated analysis.
