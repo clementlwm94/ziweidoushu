@@ -1,0 +1,42 @@
+[project]
+name = "zhiweidoushu"
+version = "0.1.0"
+description = "紫微斗数 Qdrant RAG 工具集"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "arize-otel>=0.10.0",
+    "arize-phoenix>=12.2.0",
+    "bs4>=0.0.2",
+    "faiss-cpu>=1.12.0",
+    "flashrank>=0.2.10",
+    "fastapi>=0.110.0",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.29",
+    "langchain-openai>=0.3.33",
+    "langchain-qdrant>=0.2.1",
+    "lxml>=6.0.1",
+    "openinference-instrumentation-langchain>=0.1.52",
+    "py-iztro>=0.1.5",
+    "python-dotenv>=1.0.0",
+    "python-multipart>=0.0.9",
+    "qdrant-client[fastembed]>=1.15.1",
+    "rank-llm>=0.21.0",
+    "transformers>=4.56.2",
+    "uvicorn[standard]>=0.30.0",
+]
+
+[project.scripts]
+zhiwei-rag = "zhiwei_rag.cli:main"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.1",
+]
+
+[tool.setuptools.packages.find]
+include = ["zhiwei_rag*"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
